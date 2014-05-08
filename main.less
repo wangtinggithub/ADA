@@ -1,0 +1,70 @@
+/*设置宽高*/
+.width-height(@width,@height){
+  width: @width;
+  height: @height;
+}
+/*内容区的计算方法*/
+.box-sizing{
+  -webkit-box-sizing: border-box;
+  -moz-box-sizing: border-box;
+  box-sizing:border-box;
+}
+/*圆角*/
+.border-radius(@radius:5px){
+  border-radius:@radius;
+  -webkit-border-radius:@radius;
+  -moz-border-radius: @radius;
+  -o-border-radius:@radius;
+  -ms-border-radius:@radius;
+}
+/*阴影*/
+.box-shadow(@x: 0, @y: 0, @blur: 3px, @color: @boxShadow){
+  -webkit-box-shadow: @arguments;
+  -moz-box-shadow: @arguments;
+  box-shadow:@arguments;
+}
+/*缩放旋转*/
+.transform (@rotate: 90deg, @scale: 1, @skew: 0deg, @translate: 0px) {
+  -webkit-transform: rotate(@rotate) scale(@scale) skew(@skew) translate(@translate);
+  -moz-transform: rotate(@rotate) scale(@scale) skew(@skew) translate(@translate);
+  -o-transform: rotate(@rotate) scale(@scale) skew(@skew) translate(@translate);
+  -ms-transform: rotate(@rotate) scale(@scale) skew(@skew) translate(@translate);
+  transform: rotate(@rotate) scale(@scale) skew(@skew) translate(@translate);
+
+}
+/*旋转*/
+.rotate(@num:90deg){
+  -ms-transform:rotate(@num); /* IE 9 */
+  -webkit-transform:rotate(@num);
+  -moz-transform:rotate(@num);
+  -o-transform:rotate(@num); /* Opera */
+  transform:rotate(@num);
+}
+/*缩放*/
+.scale(@num1:2,@num2:2){
+  -ms-transform:scale(@num1,@num2); /* IE 9 */
+  -webkit-transform:scale(@num1,@num2);
+  -moz-transform:scale(@num1,@num2);
+  -o-transform:scale(@num1,@num2); /* Opera */
+  transform:scale(@num1,@num2);
+}
+/*渐变*/
+.gradient (@origin: left, @start: #ffffff, @stop: #000000) {
+  background-color: @start;
+  background-image: -webkit-linear-gradient(@origin, @start, @stop);
+  background-image: -moz-linear-gradient(@origin, @start, @stop);
+  background-image: -o-linear-gradient(@origin, @start, @stop);
+  background-image: -ms-linear-gradient(@origin, @start, @stop);
+  background-image: linear-gradient(@origin, @start, @stop);
+}
+/*盒模型*/
+.box{
+  display: -moz-box;
+  display: -webkit-box;
+}
+/*盒模型分配宽度*/
+.box-flex(@num:1){
+  -moz-box-flex: 1;
+  -webkit-box-flex: 1;
+  box-flex:1;
+}
